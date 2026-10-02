@@ -1,0 +1,18 @@
+name: default
+backing: base
+
+base_type:
+  model: gw-40mm             # specific lookup. This is maker name - base definition
+  geometry: round            # round, square, elipse
+  height: 4.5                # mm
+  top_d: 37                  # mm
+  bottom_d: 39               # mm
+  
+plate_specs:
+  font: "NHL Edmonton"       # lookup
+  text: "99 WAYNE GRETZKY"
+  thickness: 1.5             # mm
+
+  border:
+    border_type:
+
