@@ -1,0 +1,25 @@
+[project]
+name = "nameplates"
+version = "0.1.0"
+description = "Generate 3D-printable name plates for miniature bases"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "build123d>=0.13",
+    "numpy>=2",
+    "pyyaml>=6",
+    "trimesh>=5",
+]
+
+[project.scripts]
+nameplates = "nameplates.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

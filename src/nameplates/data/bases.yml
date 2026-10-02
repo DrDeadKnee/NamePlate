@@ -1,0 +1,7 @@
+# Base catalog: "<maker>-<base name>" -> dimensions in mm.
+# Sizes are nominal; the real top and bottom diameters differ, so measure before adding.
+gw-40mm:
+  geometry: round
+  height: 4.5
+  top_d: 37
+  bottom_d: 39

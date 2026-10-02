@@ -1,18 +1,27 @@
 name: default
-backing: base
+backing: base                # base (wrap onto base_type) or flat
+tolerance: 0.01              # plate back is this fraction straighter than the base wall
+mesh_deviation: 0.01         # mm the mesh may stray from the true surface
 
 base_type:
   model: gw-40mm             # specific lookup. This is maker name - base definition
-  geometry: round            # round, square, elipse
+  geometry: round            # round, square, ellipse (only round is built so far)
   height: 4.5                # mm
   top_d: 37                  # mm
   bottom_d: 39               # mm
-  
+
 plate_specs:
-  font: "NHL Edmonton"       # lookup
+  font: "DejaVu Sans Bold"   # lookup: fonts/ first, then system fonts; or a path to a .ttf/.otf
   text: "99 WAYNE GRETZKY"
   thickness: 1.5             # mm
+  relief: raised             # raised or engraved
+  relief_depth: 0.5          # mm the text stands out of (or is cut into) the plate face
+  width: fit                 # fit the text, or an exact size in mm
+  height: fit                # fit the base wall, or an exact size in mm (required when flat)
+  font_size: fit             # fill the plate height, or an exact size in mm
+  padding: 0.6               # mm of clear space around the text
 
   border:
-    border_type:
-
+    border_type: none        # none or rim
+    width: 0.4               # mm
+    height:                  # mm above the plate face; blank = same as relief_depth

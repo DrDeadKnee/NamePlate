@@ -1,0 +1,15 @@
+# Batch job: plate_specs apply to every name. Anything not set here comes from default.yml.
+name: oilers
+
+plate_specs:
+  relief: raised
+  border:
+    border_type: rim
+
+names:
+  - "99 WAYNE GRETZKY"
+  - "11 MARK MESSIER"
+  - "31 GRANT FUHR"
+  # An entry can also carry its own settings:
+  - text: "17 JARI KURRI"
+    relief: engraved
